@@ -1,0 +1,45 @@
+---
+databaseChangeLog:
+  - changeSet:
+      id: createRoleTable
+      author: abid
+      changes:
+        - createTable:
+            tableName: role
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: code
+                  type: text
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: can_view_dashboard
+                  type: boolean
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: created_at
+                  type: datetime
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: updated_at
+                  type: datetime
+                  constraints:
+                    nullable: false
+                    unique: false

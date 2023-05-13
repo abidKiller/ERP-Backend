@@ -1,0 +1,88 @@
+---
+databaseChangeLog:
+  - changeSet:
+      id: createUserTable
+      author: abid
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: text
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: user_name
+                  type: text
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: password
+                  type: text
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name : role_id
+                  type: text
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: last_login_attempted
+                  type: datetime
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: login_fail_count
+                  type: int
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: fcm_token
+                  type: text
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: designation
+                  type: text
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: manager
+                  type : text
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: is_active
+                  type: boolean
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: created_at
+                  type: datetime
+                  constraints:
+                    unique: false
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: datetime
+                  constraints:
+                    unique: false
+                    nullable: false

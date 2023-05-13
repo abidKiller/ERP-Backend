@@ -1,0 +1,8 @@
+---
+databaseChangeLog:
+  - include:
+      file: tulip_erp/db.changelog-role.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: tulip_erp/db.changelog-users.yaml
+      relativeToChangelogFile: true
