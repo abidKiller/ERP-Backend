@@ -1,7 +1,7 @@
 # ERP-Backend
 An Enterprise Resource Planning Backend with Java Spring boot
 
-#Features
+# Features
 * JWT Authentication 
 * HRM (Human Resource Management)
 * Inventory
